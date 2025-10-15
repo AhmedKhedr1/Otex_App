@@ -5,7 +5,8 @@ import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Change_Ca
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Custom_Button.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Filter_Header.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Location_Bar.dart';
-import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/MonthlyInstallmentSection.dart';
+import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/DoubleTextFieldSection.dart';
+import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/OptionsSection.dart';
 
 class FilteringViewBody extends StatelessWidget {
   const FilteringViewBody({super.key});
@@ -45,10 +46,29 @@ class FilteringViewBody extends StatelessWidget {
             SizedBox(height: 20.h),
             DoubleTextFieldSection(title: 'الأقساط الشهرية'),
             SizedBox(height: 20.h),
+            Optionssection(
+              Title: 'النوع',
+              optionsList: ['الكل', 'توين هاوس', 'فيلا منفصلة', 'تاون هاوس'],
+            ),
+            Optionssection(
+              Title: 'عدد الغرف',
+              optionsList: ['4 غرف', '5 غرف+', ' الكل', ' غرفتين', '3 غرف'],
+            ),
+            SizedBox(height: 20.h),
             DoubleTextFieldSection(
               title: 'السعر',
               hint1: 'أقل سعر',
               hint2: 'أقصى سعر',
+            ),
+            SizedBox(height: 20.h),
+            Optionssection(
+              Title: 'طريقة الدفع',
+              optionsList: ['أى', 'تقسيط', 'كاش'],
+            ),
+            SizedBox(height: 20.h),
+            Optionssection(
+              Title: 'حالة العقار',
+              optionsList: ['أى', 'جاهز', 'قيد الأنشاء'],
             ),
             SizedBox(height: 78.h),
             CustomButton(),
@@ -58,12 +78,3 @@ class FilteringViewBody extends StatelessWidget {
     );
   }
 }
-/*            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16).r,
-              child: Text(
-                'النوع',
-                style: TextStyless.tajawalMedium16.copyWith(
-                  color: Color(0xff808080),
-                ),
-              ),
-            ), */
