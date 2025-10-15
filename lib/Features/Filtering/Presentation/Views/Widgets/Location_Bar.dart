@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 
@@ -26,13 +27,13 @@ class LocationBar extends StatelessWidget {
                 TextSpan(
                   text: 'الموقع\n',
                   style: TextStyless.tajawalMedium14.copyWith(
-                    color: Color(0xff090F1F),
+                    color: AppColors.kTextPrimary,
                   ),
                 ),
                 TextSpan(
                   text: 'مصر',
                   style: TextStyless.tajawalRegular12.copyWith(
-                    color: Color(0xff090F1F),
+                    color:AppColors.kTextPrimary,
                   ),
                 ),
               ],

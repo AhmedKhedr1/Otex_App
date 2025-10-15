@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Home/presentation/Views/Widgets/LabelWithIcon.dart';
@@ -31,7 +32,7 @@ final String Productimage;
                 LabelWithIcon(
                   labelp1: 'جاكيت من الصوف مناسب',
                   labelp2: '',
-                  textcolor1: Color(0xff090F1F),
+                  textcolor1: AppColors.kTextPrimary,
                   textcolor2: null,
                   image: Assets.Offers,
                   imageWidth: 20,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:otex_app/Core/helper/Custom_divider.dart';
+import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Change_Category_Button.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Custom_Button.dart';
@@ -25,24 +27,18 @@ class FilteringViewBody extends StatelessWidget {
               child: Text(
                 'الفئة',
                 style: TextStyless.tajawalMedium16.copyWith(
-                  color: Color(0xff808080),
+                  color: AppColors.kSecondaryColor,
                 ),
               ),
             ),
             SizedBox(height: 12.h),
             ChangeCategoryButton(),
             SizedBox(height: 28.h),
-            Divider(color: Color(0xffE6E6E6), thickness: 1),
+            Custom_divider(),
             SizedBox(height: 20.h),
             LocationBar(),
             SizedBox(height: 20.h),
-            Divider(
-              color: Color(0xffE6E6E6),
-              thickness: 1,
-              endIndent: 0,
-              indent: 0,
-              height: 0,
-            ),
+            Custom_divider(),
             SizedBox(height: 20.h),
             DoubleTextFieldSection(title: 'الأقساط الشهرية'),
             SizedBox(height: 20.h),
@@ -72,6 +68,7 @@ class FilteringViewBody extends StatelessWidget {
             ),
             SizedBox(height: 78.h),
             CustomButton(),
+            SizedBox(height: 16.h),
           ],
         ),
       ),

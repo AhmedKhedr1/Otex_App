@@ -18,13 +18,13 @@ class OptionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         border: Border.all(
           width: isSelected ? 2 : 1,
-          color: isSelected ? Color(0xff0079FE) : Color(0xff84878F),
+          color: isSelected ? AppColors.Kprimarycolor : Color(0xff84878F),
         ),
       ),
       child: Text(
         title,
         style: TextStyless.tajawalMedium14.copyWith(
-          color: isSelected ? Color(0xff0079FE) : Color(0xff84878F),
+          color: isSelected ? AppColors.Kprimarycolor : Color(0xff84878F),
         ),
       ),
     );

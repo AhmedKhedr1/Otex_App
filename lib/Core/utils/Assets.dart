@@ -22,4 +22,6 @@ abstract class Assets {
   static const String Location = 'assets/Icons/location_on.png';
   static const String RealEstateRounded =
       'assets/Icons/real-estate-agent-rounded.png';
+  static const String arrow_white = 'assets/Icons/arrow_White.png';
+  static const String chevron_right = 'assets/Icons/chevron_right.png';
 }

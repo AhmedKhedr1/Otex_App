@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/OptionCard.dart';
 
@@ -28,7 +29,7 @@ class _OptionssectionState extends State<Optionssection> {
           Text(
             widget.Title,
             style: TextStyless.tajawalMedium16.copyWith(
-              color: Color(0xff808080),
+              color:AppColors.kSecondaryColor,
             ),
           ),
           SizedBox(height: 12.h),
