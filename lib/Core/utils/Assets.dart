@@ -17,4 +17,9 @@ abstract class Assets {
   static const String favourite = 'assets/Icons/favorite.png';
   static const String fire = 'assets/Icons/local_fire_department.png';
   static const String CompanyLogo = 'assets/Icons/logo.png';
+  static const String Close = 'assets/Icons/close_small.png';
+  static const String chevron_backward = 'assets/Icons/chevron_backward.png';
+  static const String Location = 'assets/Icons/location_on.png';
+  static const String RealEstateRounded =
+      'assets/Icons/real-estate-agent-rounded.png';
 }

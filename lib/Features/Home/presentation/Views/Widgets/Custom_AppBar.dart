@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:otex_app/Core/utils/App_Router.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 
@@ -20,12 +22,23 @@ class customAppBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Text(
-            'الكل',
-            style: TextStyless.tajawalBold16.copyWith(color: Color(0xff808080)),
+          GestureDetector(
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.KFilteringView);
+            },
+            child: Row(
+              children: [
+                Text(
+                  'الكل',
+                  style: TextStyless.tajawalBold16.copyWith(
+                    color: Color(0xff808080),
+                  ),
+                ),
+                SizedBox(width: 4),
+                Image.asset(Assets.ArrowBack),
+              ],
+            ),
           ),
-          SizedBox(width: 4),
-          Image.asset(Assets.ArrowBack),
         ],
       ),
     );
