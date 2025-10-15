@@ -5,6 +5,7 @@ import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Custom_Button.dart';
 import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/Contact_With_Support.dart';
+import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/Plan_Card.dart';
 import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/Profile_Header.dart';
 
 class ProfileviewBody extends StatelessWidget {
@@ -17,7 +18,8 @@ class ProfileviewBody extends StatelessWidget {
         children: [
           ProfileHeader(),
           SizedBox(height: 20.h),
-          
+          PlanCard(),
+          SizedBox(height: 32.h),
           ContactWithSupport(),
           SizedBox(height: 199.h),
           Custom_divider(),

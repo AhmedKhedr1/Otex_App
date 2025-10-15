@@ -24,4 +24,11 @@ abstract class Assets {
       'assets/Icons/real-estate-agent-rounded.png';
   static const String arrow_white = 'assets/Icons/arrow_White.png';
   static const String chevron_right = 'assets/Icons/chevron_right.png';
+  static const String acute = 'assets/Icons/acute.png';
+  static const String Bounding_box = 'assets/Icons/Bounding_box.png';
+  static const String Checbkox = 'assets/Icons/Checbkox.png';
+  static const String globe = 'assets/Icons/globe.png';
+  static const String keep = 'assets/Icons/keep.png';
+  static const String rocket = 'assets/Icons/rocket.png';
+  static const String workspace_premium = 'assets/Icons/workspace_premium.png';
 }
