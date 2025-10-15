@@ -34,9 +34,9 @@ abstract class TextStyless {
     fontWeight: FontWeight.w500,
     fontSize: 24.sp,
   );
-  static TextStyle tajawalBold14 = const TextStyle(
+  static TextStyle tajawalBold14 =  TextStyle(
     fontFamily: 'Tajawal',
     fontWeight: FontWeight.w700,
-    fontSize: 14,
+    fontSize: 14.sp,
   );
 }

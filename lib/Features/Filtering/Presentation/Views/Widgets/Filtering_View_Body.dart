@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Change_Category_Button.dart';
+import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Custom_Button.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Filter_Header.dart';
 import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/Location_Bar.dart';
+import 'package:otex_app/Features/Filtering/Presentation/Views/Widgets/MonthlyInstallmentSection.dart';
 
 class FilteringViewBody extends StatelessWidget {
   const FilteringViewBody({super.key});
@@ -41,18 +43,27 @@ class FilteringViewBody extends StatelessWidget {
               height: 0,
             ),
             SizedBox(height: 20.h),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16).r,
-              child: Text(
-                'الأقساط الشهرية',
-                style: TextStyless.tajawalMedium16.copyWith(
-                  color: Color(0xff808080),
-                ),
-              ),
+            DoubleTextFieldSection(title: 'الأقساط الشهرية'),
+            SizedBox(height: 20.h),
+            DoubleTextFieldSection(
+              title: 'السعر',
+              hint1: 'أقل سعر',
+              hint2: 'أقصى سعر',
             ),
+            SizedBox(height: 78.h),
+            CustomButton(),
           ],
         ),
       ),
     );
   }
 }
+/*            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16).r,
+              child: Text(
+                'النوع',
+                style: TextStyless.tajawalMedium16.copyWith(
+                  color: Color(0xff808080),
+                ),
+              ),
+            ), */
