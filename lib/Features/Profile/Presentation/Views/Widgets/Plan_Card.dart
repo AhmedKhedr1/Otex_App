@@ -5,7 +5,7 @@ import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
 import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/Feature_ListView.dart';
-import 'package:otex_app/Features/Profile/data/models/FeatureModel.dart';
+import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/ViewsBoostCard%20.dart';
 import 'package:otex_app/Features/Profile/data/models/PlanModel%20.dart';
 
 class PlanCard extends StatelessWidget {
@@ -54,7 +54,14 @@ class PlanCard extends StatelessWidget {
           SizedBox(height: 12.h),
           Custom_divider(),
           SizedBox(height: 12.h),
-          FeatureListView(featureList: planModel.features),
+          Row(
+            children: [
+              FeatureListView(featureList: planModel.features),
+              planModel.numOfViews == null
+                  ? SizedBox.shrink()
+                  : ViewsBoostCard(number: planModel.numOfViews.toString()),
+            ],
+          ),
         ],
       ),
     );

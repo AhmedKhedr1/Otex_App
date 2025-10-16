@@ -5,7 +5,7 @@ class PlanModel {
   final List<FeatureModel> features;
   final bool isRecommended;
   final bool isSelected;
-  final int numOfViews;
+  final int? numOfViews;
 
   PlanModel({
     required this.title,
@@ -13,6 +13,6 @@ class PlanModel {
     required this.features,
     required this.isRecommended,
     required this.isSelected,
-    required this.numOfViews,
+     this.numOfViews,
   });
 }

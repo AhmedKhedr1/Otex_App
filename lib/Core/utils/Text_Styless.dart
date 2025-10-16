@@ -17,6 +17,11 @@ abstract class TextStyless {
     fontWeight: FontWeight.w400,
     fontSize: 12.sp,
   );
+    static TextStyle tajawalMeduim12 = TextStyle(
+    fontFamily: 'Tajawal',
+    fontWeight: FontWeight.w500,
+    fontSize: 12.sp,
+  );
 
   // 👇 Regular 10px
   static TextStyle tajawalRegular10 = TextStyle(

@@ -25,7 +25,7 @@ class customAppBar extends StatelessWidget {
           Spacer(),
           GestureDetector(
             onTap: () {
-              GoRouter.of(context).push(AppRouter.KProfileView);
+              GoRouter.of(context).push(AppRouter.KFilteringView);
             },
             child: Row(
               children: [

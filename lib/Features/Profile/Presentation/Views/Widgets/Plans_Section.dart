@@ -16,7 +16,6 @@ class PlansSection extends StatelessWidget {
       ],
       isRecommended: true,
       isSelected: false,
-      numOfViews: 200,
     ),
     PlanModel(
       title: 'أكسترا',

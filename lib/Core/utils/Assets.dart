@@ -31,4 +31,10 @@ abstract class Assets {
   static const String keep = 'assets/Icons/keep.png';
   static const String rocket = 'assets/Icons/rocket.png';
   static const String workspace_premium = 'assets/Icons/workspace_premium.png';
+  //Bottom bar icon
+  static const String account = 'assets/Icons/account_circle.png';
+  static const String chat = 'assets/Icons/chat.png';
+  static const String homeicon = 'assets/Icons/Homeicon.png';
+  static const String dataset = 'assets/Icons/dataset.png';
+  static const String addBox = 'assets/Icons/add_box.png';
 }
