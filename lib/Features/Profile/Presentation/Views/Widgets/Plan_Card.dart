@@ -4,10 +4,13 @@ import 'package:otex_app/Core/helper/Custom_divider.dart';
 import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
+import 'package:otex_app/Features/Profile/Presentation/Views/Widgets/Feature_ListView.dart';
+import 'package:otex_app/Features/Profile/data/models/FeatureModel.dart';
+import 'package:otex_app/Features/Profile/data/models/PlanModel%20.dart';
 
 class PlanCard extends StatelessWidget {
-  const PlanCard({super.key});
-
+  PlanCard({super.key, required this.planModel});
+  final PlanModel planModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,20 +21,27 @@ class PlanCard extends StatelessWidget {
         border: Border.all(color: Color(0xffE6E6E6), width: 1),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Image.asset(Assets.Bounding_box, height: 24.h, width: 24.w),
+              Image.asset(
+                planModel.isSelected! ? Assets.Checbkox : Assets.Bounding_box,
+                height: 24.h,
+                width: 24.w,
+              ),
               SizedBox(width: 4.w),
               Text(
-                'أساسية',
+                planModel.title,
                 style: TextStyless.tajawalBold16.copyWith(
-                  color: AppColors.kTextPrimary,
+                  color: planModel.isSelected!
+                      ? Color(0xff3B4CF2)
+                      : AppColors.kTextPrimary,
                 ),
               ),
               Spacer(),
               Text(
-                '3,000ج.م',
+                planModel.price,
                 style: TextStyless.tajawalBold16.copyWith(
                   color: Color(0xffF95B1C),
                   decoration: TextDecoration.underline,
@@ -44,24 +54,7 @@ class PlanCard extends StatelessWidget {
           SizedBox(height: 12.h),
           Custom_divider(),
           SizedBox(height: 12.h),
-          Row(
-            children: [
-              Image.asset(Assets.acute, height: 24.h, width: 24.w),
-              SizedBox(width: 8.w),
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'صلاحية الأعلان 30 يوم',
-                      style: TextStyless.tajawalMedium14.copyWith(
-                        color: AppColors.kTextPrimary,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+          FeatureListView(featureList: planModel.features),
         ],
       ),
     );

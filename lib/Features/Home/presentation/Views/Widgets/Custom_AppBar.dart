@@ -19,13 +19,13 @@ class customAppBar extends StatelessWidget {
           Text(
             'أستكشف العروض',
             style: TextStyless.tajawalMedium16.copyWith(
-              color:AppColors.kTextPrimary,
+              color: AppColors.kTextPrimary,
             ),
           ),
           Spacer(),
           GestureDetector(
             onTap: () {
-              GoRouter.of(context).push(AppRouter.KFilteringView);
+              GoRouter.of(context).push(AppRouter.KProfileView);
             },
             child: Row(
               children: [

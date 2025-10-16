@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           theme: ThemeData(fontFamily: 'Tajawal'),
           localizationsDelegates: [
             S.delegate,
@@ -31,21 +31,8 @@ class MyApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           locale: Locale('ar'),
           debugShowCheckedModeBanner: false,
-          home: Profileview(),
+          routerConfig: AppRouter.router,
         );
-        // return MaterialApp.router(
-        //   theme: ThemeData(fontFamily: 'Tajawal'),
-        //   localizationsDelegates: [
-        //     S.delegate,
-        //     GlobalMaterialLocalizations.delegate,
-        //     GlobalWidgetsLocalizations.delegate,
-        //     GlobalCupertinoLocalizations.delegate,
-        //   ],
-        //   supportedLocales: S.delegate.supportedLocales,
-        //   locale: Locale('ar'),
-        //   debugShowCheckedModeBanner: false,
-        //   routerConfig: AppRouter.router,
-        // );
       },
     );
   }

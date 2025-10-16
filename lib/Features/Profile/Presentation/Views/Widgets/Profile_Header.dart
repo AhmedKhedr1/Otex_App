@@ -17,8 +17,8 @@ class ProfileHeader extends StatelessWidget {
             children: [
               Image.asset(
                 Assets.chevron_right,
-                height: 24.w,
-                width: 24.w,
+                height: 11.w,
+                width: 6.5.w,
                 fit: BoxFit.cover,
               ),
               SizedBox(width: 12.w),
