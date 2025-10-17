@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otex_app/Core/utils/App_Colors.dart';
@@ -30,7 +32,7 @@ class NavBaritem extends StatelessWidget {
           SizedBox(height: 4.h),
           if (isSelected)
             Container(
-              width: 50.w,
+              width: 56.w,
               height: 1.8.h,
               decoration: BoxDecoration(
                 color: AppColors.kTextPrimary,

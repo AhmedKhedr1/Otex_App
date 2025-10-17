@@ -6,6 +6,8 @@ class PlanModel {
   final bool isRecommended;
   final bool isSelected;
   final int? numOfViews;
+  final String? Recommendedlabel;
+
 
   PlanModel({
     required this.title,
@@ -14,5 +16,6 @@ class PlanModel {
     required this.isRecommended,
     required this.isSelected,
      this.numOfViews,
+     this.Recommendedlabel
   });
 }

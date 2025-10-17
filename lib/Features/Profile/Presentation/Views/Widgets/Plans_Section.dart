@@ -14,7 +14,7 @@ class PlansSection extends StatelessWidget {
       features: [
         FeatureModel(icon: Assets.acute, text: 'صلاحية الأعلان 30 يوم'),
       ],
-      isRecommended: true,
+      isRecommended: false,
       isSelected: false,
     ),
     PlanModel(
@@ -29,7 +29,7 @@ class PlansSection extends StatelessWidget {
           Subtext: '( خلال ال48 ساعة القادمة )',
         ),
       ],
-      isRecommended: true,
+      isRecommended: false,
       isSelected: true,
       numOfViews: 7,
     ),
@@ -54,6 +54,7 @@ class PlansSection extends StatelessWidget {
         ),
       ],
       isRecommended: true,
+      Recommendedlabel: 'أفضل قيمة مقابل سعر',
       isSelected: true,
       numOfViews: 18,
     ),
@@ -78,6 +79,7 @@ class PlansSection extends StatelessWidget {
         ),
       ],
       isRecommended: true,
+      Recommendedlabel: 'أعلى مشاهدات',
       isSelected: false,
       numOfViews: 24,
     ),
