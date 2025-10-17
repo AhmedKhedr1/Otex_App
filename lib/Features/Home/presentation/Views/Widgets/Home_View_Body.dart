@@ -47,6 +47,7 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
           ),
+          SliverSpacer(height: 28),
         ],
       ),
     );
