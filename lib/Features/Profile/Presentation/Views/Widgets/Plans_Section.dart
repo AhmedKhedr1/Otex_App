@@ -15,7 +15,6 @@ class PlansSection extends StatelessWidget {
         FeatureModel(icon: Assets.acute, text: 'صلاحية الأعلان 30 يوم'),
       ],
       isRecommended: false,
-      isSelected: false,
     ),
     PlanModel(
       title: 'أكسترا',
@@ -30,7 +29,6 @@ class PlansSection extends StatelessWidget {
         ),
       ],
       isRecommended: false,
-      isSelected: true,
       numOfViews: 7,
     ),
     PlanModel(
@@ -55,7 +53,6 @@ class PlansSection extends StatelessWidget {
       ],
       isRecommended: true,
       Recommendedlabel: 'أفضل قيمة مقابل سعر',
-      isSelected: true,
       numOfViews: 18,
     ),
     PlanModel(
@@ -80,7 +77,6 @@ class PlansSection extends StatelessWidget {
       ],
       isRecommended: true,
       Recommendedlabel: 'أعلى مشاهدات',
-      isSelected: false,
       numOfViews: 24,
     ),
   ];
