@@ -39,61 +39,65 @@ class _PlanCardState extends State<PlanCard> {
                 ),
               )
             : SizedBox(),
-        GestureDetector(
-          onTap: toggleSelection,
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16).r,
-            margin: EdgeInsets.symmetric(horizontal: 16).r,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Color(0xffE6E6E6), width: 1),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      isSelected ? Assets.Checbkox : Assets.Bounding_box,
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16).r,
+          margin: EdgeInsets.symmetric(horizontal: 16).r,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: Color(0xffE6E6E6), width: 1),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: toggleSelection,
+                    child: SizedBox(
                       height: 24.h,
                       width: 24.w,
-                    ),
-                    SizedBox(width: 4.w),
-                    Text(
-                      widget.planModel.title,
-                      style: TextStyless.tajawalBold16.copyWith(
-                        color: isSelected
-                            ? Color(0xff3B4CF2)
-                            : AppColors.kTextPrimary,
+                      child: Image.asset(
+                        isSelected ? Assets.Checbkox : Assets.Bounding_box,
+                        height: 24.h,
+                        width: 24.w,
                       ),
                     ),
-                    Spacer(),
-                    Text(
-                      widget.planModel.price,
-                      style: TextStyless.tajawalBold16.copyWith(
-                        color: Color(0xffF95B1C),
-                        decoration: TextDecoration.underline,
-                        decorationColor: Color(0xffF95B1C),
-                        decorationThickness: 1,
-                      ),
+                  ),
+                  SizedBox(width: 4.w),
+                  Text(
+                    widget.planModel.title,
+                    style: TextStyless.tajawalBold16.copyWith(
+                      color: isSelected
+                          ? Color(0xff3B4CF2)
+                          : AppColors.kTextPrimary,
                     ),
-                  ],
-                ),
-                SizedBox(height: 12.h),
-                Custom_divider(),
-                SizedBox(height: 12.h),
-                Row(
-                  children: [
-                    FeatureListView(featureList: widget.planModel.features),
-                    widget.planModel.numOfViews == null
-                        ? SizedBox.shrink()
-                        : ViewsBoostCard(
-                            number: widget.planModel.numOfViews.toString(),
-                          ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                  Spacer(),
+                  Text(
+                    widget.planModel.price,
+                    style: TextStyless.tajawalBold16.copyWith(
+                      color: Color(0xffF95B1C),
+                      decoration: TextDecoration.underline,
+                      decorationColor: Color(0xffF95B1C),
+                      decorationThickness: 1,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              Custom_divider(),
+              SizedBox(height: 12.h),
+              Row(
+                children: [
+                  FeatureListView(featureList: widget.planModel.features),
+                  widget.planModel.numOfViews == null
+                      ? SizedBox.shrink()
+                      : ViewsBoostCard(
+                          number: widget.planModel.numOfViews.toString(),
+                        ),
+                ],
+              ),
+            ],
           ),
         ),
       ],

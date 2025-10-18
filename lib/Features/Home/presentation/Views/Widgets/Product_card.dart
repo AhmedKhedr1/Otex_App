@@ -3,11 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:otex_app/Core/utils/App_Colors.dart';
 import 'package:otex_app/Core/utils/Assets.dart';
 import 'package:otex_app/Core/utils/Text_Styless.dart';
+import 'package:otex_app/Features/Home/data/models/Product_model.dart';
 import 'package:otex_app/Features/Home/presentation/Views/Widgets/LabelWithIcon.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key, required this.Productimage});
-final String Productimage;
+  const ProductCard({super.key, required this.productModel});
+  final ProductModel productModel;
   Widget build(BuildContext context) {
     return Container(
       width: 158.w,
@@ -19,7 +20,7 @@ final String Productimage;
       child: Column(
         children: [
           Image.asset(
-           Productimage,
+            productModel.image,
             height: 215.h,
             width: 158.w,
             fit: BoxFit.cover,
@@ -30,7 +31,7 @@ final String Productimage;
             child: Column(
               children: [
                 LabelWithIcon(
-                  labelp1: 'جاكيت من الصوف مناسب',
+                  labelp1: productModel.name,
                   labelp2: '',
                   textcolor1: AppColors.kTextPrimary,
                   textcolor2: null,
@@ -40,7 +41,7 @@ final String Productimage;
                 ),
                 SizedBox(height: 8.h),
                 LabelWithIcon(
-                  labelp1: '32,000,000جم/',
+                  labelp1: productModel.price,
                   labelp2: '60,000,000',
                   image: Assets.favourite,
                   textcolor1: Color(0xffFF4144),
