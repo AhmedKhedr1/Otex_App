@@ -68,9 +68,9 @@ class PlanLocalDataSource {
       for (var plan in plans) {
         await insertPlan(plan);
       }
-      print('✅ تم إدخال الخطط بنجاح في قاعدة البيانات');
+      print(' تم إدخال الخطط بنجاح في قاعدة البيانات');
     } else {
-      print('ℹ️ قاعدة البيانات تحتوي بالفعل على بيانات');
+      print('ℹ قاعدة البيانات تحتوي بالفعل على بيانات');
     }
   }
 
